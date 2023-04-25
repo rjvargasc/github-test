@@ -14,4 +14,4 @@ jobs:
       with:
         token: ${{ secrets.MY_PAT_TOKEN }}
         repository: rjvargasc/github-triggered
-        event-type: trigger-examplea
+        event-type: trigger-examples
