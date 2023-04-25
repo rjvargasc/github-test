@@ -1,0 +1,17 @@
+name: Trigger automation job
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Trigger event
+      uses: peter-evans/repository-dispatch@v1
+      with:
+        token: ${{ secrets.MY_PAT_TOKEN }}
+        repository: rjvargasc/github-triggered
+        event-type: trigger-example
