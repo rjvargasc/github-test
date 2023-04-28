@@ -9,12 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-#    - name: Trigger event II
-#      uses: peter-evans/repository-dispatch@v1
-#      with:
-#        token: ${{ secrets.MY_PAT_TOKEN }}
-#        repository: rjvargasc/github-triggered
-#        event-type: trigger-example
 
     - name: Trigger other repository
       run: |
@@ -23,4 +17,4 @@ jobs:
           -H "Accept: application/vnd.github.everest-preview+json" \
           -H "Authorization: Bearer ${{ secrets.MY_PAT_TOKEN }}" \
           https://api.github.com/repos/rjvargasc/github-triggered/dispatches \
-          -d '{"event_type": "trigger-example"}
+          -d '{"event_type": "trigger-example"}'
