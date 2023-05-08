@@ -1,10 +1,10 @@
 name: Trigger automation job
 
 on:
-  push:
-    branches:
-      - main
-
+  workflow_run:
+    workflows: [Build and Deploy]
+    types: ['completed']
+      
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,5 +16,5 @@ jobs:
           -X POST \
           -H "Accept: application/vnd.github.everest-preview+json" \
           -H "Authorization: Bearer ${{ secrets.MY_PAT_TOKEN }}" \
-          https://api.github.com/repos/rjvargasc/github-triggered/dispatches \
-          -d '{"event_type": "trigger-example"}'
+          https://api.github.com/repos/lunacare/automation/dispatches \
+          -d '{"event_type": "web-tests", "client_payload":{"environment":"ALPHA"}}'
