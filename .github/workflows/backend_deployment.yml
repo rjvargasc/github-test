@@ -3,10 +3,13 @@ on:
   workflow_dispatch:
         
 jobs:
-  automation-tests-edge:
-    name: Automation Tests Edge
-    uses: ./.github/workflows/ci.yml
-    secrets: inherit
-    with:
-      DEPLOY_ENV: "ALPHA"
-      
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Clone repo
+      uses: actions/checkout@v2
+    - name: Waiting for a command
+      run: |
+        sleep 15
+    - name: Random command
+      run: ls
