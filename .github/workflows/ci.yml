@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: display branch
-      run: ${{ github.ref }}
+      run: echo ${{ github.ref }}
     - name: Trigger other repository
       run: |
         curl \
