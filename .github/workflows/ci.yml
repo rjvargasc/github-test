@@ -12,7 +12,7 @@ jobs:
     - name: Setting branch name
       run: echo "BRANCH=${GITHUB_REF##*/}" >> $GITHUB_ENV
 
-    - name: Trigger other repository
+    - name: Triggering automation tests
       run: |
         curl \
           -X POST \
