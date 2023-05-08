@@ -14,11 +14,13 @@ jobs:
 
     - name: Triggering automation tests
       run: |
-        response=$(curl \
+        code=$(curl --write-out '%{http_code}'\
           -X POST \
           -H "Accept: application/vnd.github.everest-preview+json" \
           -H "Authorization: Bearer ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}" \
           https://api.github.com/repos/lunacare/automation/dispatches \
           -d '{"event_type": "web-tests", "client_payload":{"branch":"${{env.BRANCH}}"}}')
-        echo "response from curl= $response"
+        echo "status code = $code"
+        if $code != 204
+          echo "There was an error triggering automated tests"
         exit 1
