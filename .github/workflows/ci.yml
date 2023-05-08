@@ -22,6 +22,6 @@ jobs:
           -d '{"event_type": "web-tests", "client_payload":{"branch":"${{env.BRANCH}}"}}')
         echo "response = $response"
         if grep -q "204" <<< "$response"; then
-          echo There was and error triggering automated tests for the web"
+          echo "There was and error triggering automated tests for the web"
           exit 1
         fi
