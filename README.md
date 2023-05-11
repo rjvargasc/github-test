@@ -1,4 +1,4 @@
-| Branch      | Build status                                                                                                                                                                                              |
+| Branch      | Test status                                                                                                                                                                                               |
 |-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **main**    | [![Backend Tests](https://github.com/rjvargasc/github-triggered/actions/workflows/triggered.yml/badge.svg?branch=main)](https://github.com/rjvargasc/github-triggered/actions/workflows/triggered.yml)    |
 | **develop** | [![Backend Tests](https://github.com/rjvargasc/github-triggered/actions/workflows/triggered.yml/badge.svg?branch=develop)](https://github.com/rjvargasc/github-triggered/actions/workflows/triggered.yml) |

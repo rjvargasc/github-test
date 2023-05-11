@@ -14,7 +14,6 @@ jobs:
 
     - name: Triggering automation tests
       run: |
-        response=$(curl --silent --write-out '%{http_code}'\
           -X POST \
           -H "Accept: application/vnd.github.everest-preview+json" \
           -H "Authorization: Bearer ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}" \
