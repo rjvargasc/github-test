@@ -17,9 +17,9 @@
 
 | Branch      | Android (Therapist)                                                                                                                                                                                                                 |
 |-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **staging** | [![Android Tests](https://github.com/lunacare/automation/actions/workflows/mobile_android_run_lambdatest.yml/badge.svg?branch=develop)](https://github.com/lunacare/automation/actions/workflows/mobile_android_run_lambdatest.yml) |
+| **staging** | [![Android Tests](https://github.com/lunacare/automation/actions/workflows/mobile_android_therapist_run_lambdatest.yml/badge.svg?branch=develop)](https://github.com/lunacare/automation/actions/workflows/mobile_android_therapist_run_lambdatest.yml) |
 
 
 | Branch      | Android (Patient)                                                                                                                                                                                                                   |
 |-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **staging** | [![Android Tests](https://github.com/lunacare/automation/actions/workflows/mobile_android_run_lambdatest.yml/badge.svg?branch=develop)](https://github.com/lunacare/automation/actions/workflows/mobile_android_run_lambdatest.yml) |
+| **staging** | [![Android Tests](https://github.com/lunacare/automation/actions/workflows/mobile_android_patient_run_lambdatest.yml/badge.svg?branch=develop)](https://github.com/lunacare/automation/actions/workflows/mobile_android_patient_run_lambdatest.yml) |
