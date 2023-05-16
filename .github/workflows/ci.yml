@@ -19,7 +19,7 @@ jobs:
 
     - name: Setting environment variable
       run: |     
-        if [[ ${{env.BRANCH = "main"}} ]]; then
+        if [[ ${{env.BRANCH == "main"}} ]]; then
             echo "EVENT_TYPE=web-tests-alpha" >> $GITHUB_ENV
             exit 0
         fi    
