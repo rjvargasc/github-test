@@ -18,7 +18,7 @@ jobs:
         echo "COMMIT=${GITHUB_REF#refs/heads/}.${GITHUB_SHA}" >> $GITHUB_ENV
 
     - name: Setting environment variable v2
-      if: $BRANCH == 'main'
+      if: env.BRANCH == 'main'
       run: echo "EVENT_TYPE2=web-tests-alpha" >> $GITHUB_ENV
       
     - name: display event type variable v2
