@@ -15,9 +15,9 @@ jobs:
         echo "COMMIT=${GITHUB_REF#refs/heads/}.${GITHUB_SHA}" >> $GITHUB_ENV
         echo "APP_PREFIX=therapist" >> $GITHUB_ENV
         if [[ $APP_PREFIX = "therapist" ]]; then
-            EVENT_TYPE = "ios-therapist-tests
+            EVENT_TYPE = "ios-therapist-tests"
         else
-            EVENT_TYPE = "ios-patient-tests
+            EVENT_TYPE = "ios-patient-tests"
         fi
         
     - name: Triggering automation tests
@@ -27,7 +27,7 @@ jobs:
           -H "Accept: application/vnd.github.everest-preview+json" \
           -H "Authorization: Bearer ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}" \
           https://api.github.com/repos/rjvargasc/github-triggered/dispatches \
-          -d '{"event_type": EVENT_TYPE, "client_payload":{"branch":"${{env.BRANCH}}", "commit":"${{env.COMMIT}}"}}')
+          -d '{"event_type": '$EVENT_TYPE', "client_payload":{"branch":"${{env.BRANCH}}", "commit":"${{env.COMMIT}}"}}')
         echo "response = $response"
         if ! grep -q "204" <<< "$response"; then
           echo "There was and error triggering automated tests for the web"
