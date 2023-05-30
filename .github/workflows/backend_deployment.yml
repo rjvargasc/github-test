@@ -1,6 +1,10 @@
 name: Build and Deploy
 on:
   workflow_dispatch:
+     inputs:
+       my_parameter:
+         description: 'My First param'
+         required: true
         
 jobs:
   build:
@@ -11,5 +15,6 @@ jobs:
     - name: Waiting for a command
       run: |
         sleep 15
-    - name: Random command
-      run: ls
+    - name: Random command 
+      run: |
+          echo "El valor del parámetro es ${{ github.event.inputs.my_parameter }}"
