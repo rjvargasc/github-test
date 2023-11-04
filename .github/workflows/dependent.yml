@@ -1,9 +1,10 @@
 name: Dependent
 
-workflow_run:
-  workflows: [ "Complete job" ]
-  types:
-    - completed
+on:
+  workflow_run:
+    workflows: [ "Complete job" ]
+    types:
+      - completed
 
 jobs:
   build:
