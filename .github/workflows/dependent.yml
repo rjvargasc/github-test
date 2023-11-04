@@ -2,7 +2,7 @@ name: Dependent
 
 on:
   workflow_run:
-    workflows: [ "Complete job" ]
+    workflows: [ "Complete job (alpha)" ]
     types:
       - completed
 
