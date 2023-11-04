@@ -1,0 +1,11 @@
+name: Complete job
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Complete job workflow
+        run: echo Complete job

@@ -1,0 +1,14 @@
+name: Dependent
+
+workflow_run:
+  workflows: [ "Complete job" ]
+  types:
+    - completed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Second workflow
+        run: echo Second workflow called
