@@ -8,4 +8,4 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Complete job workflow
-        run: echo Complete job
+        run: exit 1
